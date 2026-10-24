@@ -1,0 +1,35 @@
+# Two pairs: one in front, one behind. Here each pair is one output whose left and right
+# jacks feed two separate boxes (two stereo speakers with long cables, or two twin outputs).
+#
+#              12
+#    10 ●                ● 2
+#    9      [ seat ]        3
+#     8 ●                ● 4
+#               6
+version = 1
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-left"
+  channels = ["FL"]
+  at = 10
+
+  [[output.speaker]]
+  id = "front-right"
+  channels = ["FR"]
+  at = 2
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "rear-left"
+  channels = ["FL"]
+  at = 8
+
+  [[output.speaker]]
+  id = "rear-right"
+  channels = ["FR"]
+  at = 4

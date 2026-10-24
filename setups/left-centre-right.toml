@@ -1,0 +1,29 @@
+# A pair in front plus a centre speaker straight ahead (a soundbar or a speaker under the TV)
+# that carries the vocals.
+#
+#              ● 12 Centre
+#    10 ●                ● 2
+#    9      [ seat ]        3
+#               6
+version = 1
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "centre"
+  channels = ["FL", "FR"]
+  at = 12
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-left"
+  channels = ["FL"]
+  at = 10
+
+  [[output.speaker]]
+  id = "front-right"
+  channels = ["FR"]
+  at = 2

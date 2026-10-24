@@ -1,0 +1,31 @@
+name: Share your setup
+description: Tell us how your speakers are arranged and how Sounar does with them.
+labels: ["setup"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Setups shared here become examples in `setups/`, and help tune the presets for rooms like yours.
+  - type: textarea
+    id: room
+    attributes:
+      label: Your speakers
+      description: |
+        Each speaker, where it sits (12 = straight ahead, 3 = your right, 6 = behind, 9 = your left), and how it's connected.
+        `sounar speakers` prints this; you can leave out names.
+      placeholder: |
+        front-left   11 o'clock   stereo Bluetooth speaker
+        front-right   2 o'clock   left jack of a second Bluetooth speaker
+        rear-right    4 o'clock   right jack of the same one
+    validations:
+      required: true
+  - type: textarea
+    id: works
+    attributes:
+      label: How it sounds
+      description: Which presets work well, which don't, and any fine-tuning you settled on.
+  - type: textarea
+    id: doctor
+    attributes:
+      label: sounar doctor (optional)
+      render: markdown

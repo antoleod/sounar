@@ -1,0 +1,31 @@
+# A stereo pair in front and one speaker behind you for the room's ambience.
+#
+#              12
+#    10 ●                ● 2
+#    9      [ seat ]        3
+#               ● 6  Rear centre
+version = 1
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-left"
+  channels = ["FL", "FR"]
+  at = 10
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-right"
+  channels = ["FL", "FR"]
+  at = 2
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "rear-centre"
+  channels = ["FL", "FR"]
+  at = 6

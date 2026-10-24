@@ -1,0 +1,35 @@
+# One stereo box in front, slightly left of where you face, and a second output whose two
+# jacks feed two separate boxes on your right: one in front, one behind. Sounar's first room.
+#
+#              12
+#    11 ● Front left (stereo box)
+#                      ● 2  Front right  (second output, left jack)
+#    9      [ seat ]        3
+#                      ● 4  Rear right   (second output, right jack)
+#               6
+#
+# Used by `sounar setup --example stereo-box-and-twin-right`: it asks which of your outputs
+# is which and fills in the rest.
+version = 1
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-left"
+  channels = ["FL", "FR"]
+  at = 11
+  bass_boost = false
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-right"
+  channels = ["FL"]
+  at = 2
+
+  [[output.speaker]]
+  id = "rear-right"
+  channels = ["FR"]
+  at = 4

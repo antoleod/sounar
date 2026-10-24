@@ -1,0 +1,114 @@
+{
+ "preset": "movie",
+ "layout": "stereo",
+ "params": {},
+ "ee": "Sounar Movie Night",
+ "state": {
+  "levels": {
+   "stereo-box": 0.0,
+   "twin-front": -3.18,
+   "twin-rear": -2.85
+  },
+  "align_ms": 3.0,
+  "sync_ms": {
+   "stereo-box": 0.0,
+   "twin": 17.9
+  }
+ },
+ "correction": {
+  "stereo-box": [
+   {
+    "type": "highshelf",
+    "freq": 10.0,
+    "gain": -2.0,
+    "q": 0.7
+   },
+   {
+    "type": "highpass",
+    "freq": 50.0,
+    "gain": 0.0,
+    "q": 0.707
+   },
+   {
+    "type": "highpass",
+    "freq": 50.0,
+    "gain": 0.0,
+    "q": 0.707
+   },
+   {
+    "type": "peaking",
+    "freq": 85.0,
+    "gain": 4.0,
+    "q": 1.2
+   },
+   {
+    "type": "peaking",
+    "freq": 112.0,
+    "gain": -3.0,
+    "q": 5.0
+   },
+   {
+    "type": "peaking",
+    "freq": 1250.0,
+    "gain": 3.0,
+    "q": 1.4
+   },
+   {
+    "type": "highshelf",
+    "freq": 8000.0,
+    "gain": -3.0,
+    "q": 0.7
+   }
+  ],
+  "twin": [
+   {
+    "type": "highshelf",
+    "freq": 10.0,
+    "gain": -3.0,
+    "q": 0.7
+   },
+   {
+    "type": "peaking",
+    "freq": 112.0,
+    "gain": -7.0,
+    "q": 3.0
+   },
+   {
+    "type": "peaking",
+    "freq": 135.0,
+    "gain": -4.0,
+    "q": 3.5
+   },
+   {
+    "type": "peaking",
+    "freq": 175.0,
+    "gain": -3.0,
+    "q": 4.0
+   },
+   {
+    "type": "peaking",
+    "freq": 330.0,
+    "gain": 2.5,
+    "q": 2.0
+   },
+   {
+    "type": "peaking",
+    "freq": 3000.0,
+    "gain": 2.5,
+    "q": 1.4
+   },
+   {
+    "type": "highshelf",
+    "freq": 9000.0,
+    "gain": 2.0,
+    "q": 0.7
+   }
+  ]
+ },
+ "graphs": {
+  "stereo-box": "{ nodes = [ { type = builtin name = cl label = copy } { type = builtin name = cr label = copy } { type = builtin name = snr label = mixer control = { \"Gain 1\" = 1.000000 \"Gain 8\" = 0.188335 } } { type = builtin name = dl label = delay config = { \"max-delay\" = 0.5 } control = { \"Delay (s)\" = 0.000000 } } { type = builtin name = dr label = delay config = { \"max-delay\" = 0.5 } control = { \"Delay (s)\" = 0.000000 } } { type = builtin name = eql label = param_eq config = { filters = [ { type = bq_highshelf freq = 10 gain = -2.0 q = 0.7 } { type = bq_highpass freq = 50 gain = 0.0 q = 0.707 } { type = bq_highpass freq = 50 gain = 0.0 q = 0.707 } { type = bq_peaking freq = 85 gain = 4.0 q = 1.2 } { type = bq_peaking freq = 112 gain = -3.0 q = 5.0 } { type = bq_peaking freq = 1250 gain = 3.0 q = 1.4 } { type = bq_highshelf freq = 8000 gain = -3.0 q = 0.7 } ] } } { type = builtin name = eqr label = param_eq config = { filters = [ { type = bq_highshelf freq = 10 gain = -2.0 q = 0.7 } { type = bq_highpass freq = 50 gain = 0.0 q = 0.707 } { type = bq_highpass freq = 50 gain = 0.0 q = 0.707 } { type = bq_peaking freq = 85 gain = 4.0 q = 1.2 } { type = bq_peaking freq = 112 gain = -3.0 q = 5.0 } { type = bq_peaking freq = 1250 gain = 3.0 q = 1.4 } { type = bq_highshelf freq = 8000 gain = -3.0 q = 0.7 } ] } } ] links = [ { output = \"cl:Out\" input = \"snr:In 1\" } { output = \"snr:Out\" input = \"dl:In\" } { output = \"cr:Out\" input = \"dr:In\" } { output = \"dl:Out\" input = \"eql:In 1\" } { output = \"dr:Out\" input = \"eqr:In 1\" } ] inputs = [ \"cl:In\" \"cr:In\" ] outputs = [ \"eql:Out 1\" \"eqr:Out 1\" ] }",
+  "twin": "{ nodes = [ { type = builtin name = cl label = copy } { type = builtin name = cr label = copy } { type = builtin name = snr label = mixer control = { \"Gain 1\" = 1.000000 \"Gain 8\" = 0.374901 } } { type = builtin name = dl label = delay config = { \"max-delay\" = 0.5 } control = { \"Delay (s)\" = 0.017900 } } { type = builtin name = dr label = delay config = { \"max-delay\" = 0.5 } control = { \"Delay (s)\" = 0.017900 } } { type = builtin name = eql label = param_eq config = { filters = [ { type = bq_highshelf freq = 10 gain = -3.0 q = 0.7 } { type = bq_peaking freq = 112 gain = -7.0 q = 3.0 } { type = bq_peaking freq = 135 gain = -4.0 q = 3.5 } { type = bq_peaking freq = 175 gain = -3.0 q = 4.0 } { type = bq_peaking freq = 330 gain = 2.5 q = 2.0 } { type = bq_peaking freq = 3000 gain = 2.5 q = 1.4 } { type = bq_highshelf freq = 9000 gain = 2.0 q = 0.7 } ] } } { type = builtin name = eqr label = param_eq config = { filters = [ { type = bq_highshelf freq = 10 gain = -3.0 q = 0.7 } { type = bq_peaking freq = 112 gain = -7.0 q = 3.0 } { type = bq_peaking freq = 135 gain = -4.0 q = 3.5 } { type = bq_peaking freq = 175 gain = -3.0 q = 4.0 } { type = bq_peaking freq = 330 gain = 2.5 q = 2.0 } { type = bq_peaking freq = 3000 gain = 2.5 q = 1.4 } { type = bq_highshelf freq = 9000 gain = 2.0 q = 0.7 } ] } } ] links = [ { output = \"cl:Out\" input = \"snr:In 1\" } { output = \"snr:Out\" input = \"dl:In\" } { output = \"cr:Out\" input = \"dr:In\" } { output = \"dl:Out\" input = \"eql:In 1\" } { output = \"dr:Out\" input = \"eqr:In 1\" } ] inputs = [ \"cl:In\" \"cr:In\" ] outputs = [ \"eql:Out 1\" \"eqr:Out 1\" ] }"
+ },
+ "autogain_target": -15,
+ "loudness_db": -0.544677635988582
+}

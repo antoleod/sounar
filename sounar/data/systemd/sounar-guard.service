@@ -1,0 +1,12 @@
+[Unit]
+Description=Sounar guard: keeps the speaker setup as it should be (plays no sound)
+Documentation=https://github.com/zane8n/sounar
+After=pipewire.service wireplumber.service pipewire-pulse.service
+
+[Service]
+ExecStart=%h/.local/bin/sounar guard run
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

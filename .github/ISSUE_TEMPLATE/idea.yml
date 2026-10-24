@@ -1,0 +1,16 @@
+name: Idea
+description: Something Sounar could do.
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like it to do?
+      description: Start from what you'd hear or do, not how to build it.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Your setup
+      description: Speakers and desktop, if it matters for the idea.

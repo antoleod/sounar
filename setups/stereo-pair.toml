@@ -1,0 +1,25 @@
+# Two speakers in front, one each side: the classic stereo pair. Each can be a stereo box
+# (two Bluetooth speakers) or one channel of a single output.
+#
+#              12
+#    10 ●                ● 2
+#    Front left     Front right
+#    9      [ seat ]        3
+#               6
+version = 1
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-left"
+  channels = ["FL", "FR"]
+  at = 10
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-right"
+  channels = ["FL", "FR"]
+  at = 2

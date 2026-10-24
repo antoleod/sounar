@@ -1,0 +1,72 @@
+[
+ {
+  "index": 45,
+  "sink": 36,
+  "mute": false,
+  "corked": false,
+  "volume": {
+   "front-left": {
+    "value": 0,
+    "value_percent": "0%",
+    "db": "-inf dB"
+   },
+   "front-right": {
+    "value": 0,
+    "value_percent": "0%",
+    "db": "-inf dB"
+   }
+  },
+  "properties": {
+   "application.name": "pw-cat",
+   "node.name": "speaker_keepalive",
+   "media.name": "Speaker keep-alive",
+   "media.class": "Stream/Output/Audio"
+  }
+ },
+ {
+  "index": 121146,
+  "sink": 121145,
+  "mute": false,
+  "corked": false,
+  "volume": {
+   "front-left": {
+    "value": 65536,
+    "value_percent": "100%",
+    "db": "0.00 dB"
+   },
+   "front-right": {
+    "value": 65536,
+    "value_percent": "100%",
+    "db": "0.00 dB"
+   }
+  },
+  "properties": {
+   "media.name": "Sounar output",
+   "node.name": "output.sounar_bluez_output.00_00_00_00_00_01.1",
+   "media.class": "Stream/Output/Audio"
+  }
+ },
+ {
+  "index": 121240,
+  "sink": 121239,
+  "mute": false,
+  "corked": false,
+  "volume": {
+   "front-left": {
+    "value": 65536,
+    "value_percent": "100%",
+    "db": "0.00 dB"
+   },
+   "front-right": {
+    "value": 65536,
+    "value_percent": "100%",
+    "db": "0.00 dB"
+   }
+  },
+  "properties": {
+   "media.name": "Sounar output",
+   "node.name": "output.sounar_bluez_output.00_00_00_00_00_02.1",
+   "media.class": "Stream/Output/Audio"
+  }
+ }
+]

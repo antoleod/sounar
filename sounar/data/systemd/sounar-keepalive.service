@@ -1,0 +1,12 @@
+[Unit]
+Description=Sounar keep-alive: silence into the combined output so Bluetooth links keep their delay
+Documentation=https://github.com/zane8n/sounar
+After=pipewire.service pipewire-pulse.service
+
+[Service]
+ExecStart=%h/.local/bin/sounar keepalive
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

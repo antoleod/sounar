@@ -1,0 +1,31 @@
+# A stereo pair plus a subwoofer, anywhere in the room (bass doesn't tell where it comes from).
+#
+#              12
+#    10 ●                ● 2
+#    9      [ seat ]        3
+#               6     ■ Sub
+version = 1
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-left"
+  channels = ["FL", "FR"]
+  at = 10
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "front-right"
+  channels = ["FL", "FR"]
+  at = 2
+
+[[output]]
+node = ""
+
+  [[output.speaker]]
+  id = "sub"
+  channels = ["FL", "FR"]
+  sub = true

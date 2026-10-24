@@ -1,0 +1,27 @@
+{
+  "preset": "club",
+  "previous": "music-room",
+  "tweaks": {
+    "music-room": {
+      "bass": 1.5
+    },
+    "party": {
+      "ee": "Late Night",
+      "width": 0.4
+    }
+  },
+  "calibration": {
+    "levels": {
+      "box": 0.0,
+      "front": -3.18,
+      "rear": -2.85
+    },
+    "align_ms": 3.0,
+    "source": "sounar calibrate",
+    "ts": "2026-10-24T13:43:55"
+  },
+  "sync_ms": {
+    "box": 0.0,
+    "twin": 17.9
+  }
+}
